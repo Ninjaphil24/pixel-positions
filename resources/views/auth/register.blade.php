@@ -1,6 +1,6 @@
 <x-layout>
     <x-page-heading>Register</x-page-heading>
-    <x-forms.form method="POST" action="/register" entype="multipart/form-data">
+    <x-forms.form method="POST" action="/register" enctype="multipart/form-data">
         <x-forms.input class="input" label="Name" name="name" />
         <x-forms.input class="input" label="Email" name="email" type="email" />
         <x-forms.input class="input" label="Password" name="password" type="password" />
