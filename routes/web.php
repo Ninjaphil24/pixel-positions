@@ -8,6 +8,10 @@ use App\Http\Controllers\SessionController;
 use App\Http\Controllers\RegisteredUserController;
 
 Route::get('/', [JobsController::class, 'index']);
+
+Route::get('/jobs/create', [JobsController::class, 'create'])->middleware('auth');
+Route::post('/jobs', [JobsController::class, 'store'])->middleware('auth');
+
 Route::get('/search', SearchController::class);
 Route::get('/tags/{tag:name}', TagController::class);
 

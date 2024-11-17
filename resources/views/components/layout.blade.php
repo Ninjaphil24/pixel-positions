@@ -30,6 +30,12 @@
                 <div>
                     <a href="/jobs/create">Post a Job</a>
                 </div>
+
+                <form method="POST" action="/logout">
+                    @csrf
+                    @method('DELETE')
+                    <button>Log Out</button>
+                </form>
             @endauth
 
             @guest
